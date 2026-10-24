@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fresas y Fresones de Aranjuez - Huerta Real y Villa (Demo Inaccesible)</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍓</text></svg>">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            outline: none !important;
+        }
+
+        body {
+            background-color: #faf7f5;
+            color: #2b2b2b;
+            line-height: 1.5;
+        }
+
+        .top-announcement {
+            background: #ff6b6b;
+            color: #ffe3e3;
+            text-align: center;
+            padding: 7px 15px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-container {
+            background: #590d22;
+            color: #ffccd5;
+            padding: 6px 12px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .ticker-text {
+            display: inline-block;
+            animation: ticker-slide 14s linear infinite;
+        }
+
+        @keyframes ticker-slide {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .header-wrapper {
+            background: #ffffff;
+            border-bottom: 1px solid #f0e6e6;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .brand-logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #c9184a;
+            letter-spacing: -0.5px;
+        }
+
+        .search-box-container {
+            flex: 1;
+            max-width: 460px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 16px;
+            border: 1px solid #767676;
+            border-radius: 24px;
+            font-size: 14px;
+            background: #fdfbfb;
+            color: #333333;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-link {
+            color: #4a4a4a;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #c9184a;
+        }
+
+        .cart-pill {
+            background: #c9184a;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #fff0eb 0%, #ffe8d6 100%);
+            padding: 60px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #fed7cc;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #c9184a;
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            line-height: 1.15;
+            font-weight: 900;
+            color: #a4133c;
+            margin-bottom: 14px;
+        }
+
+        .hero-subtitle {
+            color: #666666;
+            font-size: 18px;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .hero-cta-btn {
+            display: inline-block;
+            background: #c9184a;
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(201, 24, 74, 0.2);
+        }
+
+        .hero-image-box {
+            max-width: 440px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .catalog-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .section-header-box {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #590d22;
+            margin-bottom: 6px;
+        }
+
+        .section-desc {
+            color: #666666;
+            font-size: 15px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 26px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #f2e9e4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #fff9db;
+            color: #f2c94c;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1f1f1f;
+            margin-bottom: 6px;
+        }
+
+        .product-desc {
+            color: #666666;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .stock-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        .stock-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .stock-green {
+            background: #22c55e;
+        }
+
+        .stock-yellow {
+            background: #8a5b00;
+        }
+
+        .stock-red {
+            background: #b42318;
+        }
+
+        .more-link {
+            font-size: 11px;
+            color: #c9184a;
+            text-decoration: underline;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .qty-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .qty-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        .qty-select {
+            background: #ffffff;
+            border: 1.5px solid #8c7a7a;
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #2b2b2b;
+            cursor: pointer;
+        }
+
+        .qty-select:focus {
+            outline: none;
+        }
+
+        .qty-stepper {
+            display: inline-flex;
+            align-items: center;
+            background: #ffffff;
+            border: 1.5px solid #8c7a7a;
+            border-radius: 24px;
+            padding: 3px 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .qty-stepper:focus-within {
+            border-color: #a4133c;
+            box-shadow: 0 0 0 3px rgba(164, 19, 60, 0.15);
+        }
+
+        .qty-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border: none;
+            background: #fbf3f4;
+            color: #a4133c;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+            transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+            user-select: none;
+        }
+
+        .qty-btn:hover {
+            background: #a4133c;
+            color: #ffffff;
+        }
+
+        .qty-btn:active {
+            transform: scale(0.92);
+        }
+
+        .qty-input {
+            width: 38px;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: #2b2b2b;
+            padding: 0 2px;
+            -moz-appearance: textfield;
+        }
+
+        .qty-input::-webkit-outer-spin-button,
+        .qty-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .qty-input:focus {
+            outline: none;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 800;
+            color: #a4133c;
+        }
+
+        .tax-notice {
+            font-size: 11px;
+            color: #666666;
+        }
+
+        .add-to-cart-btn {
+            background: #c9184a;
+            color: #ffffff;
+            border: none;
+            box-shadow: none;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #a4133c;
+            color: #ffffff;
+        }
+
+        .info-banner-box {
+            background: #ffffff;
+            border: 1px solid #eedede;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 32px;
+            text-align: center;
+            font-size: 13px;
+            color: #555555;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        .modal-window {
+            background: #ffffff;
+            border-radius: 16px;
+            max-width: 520px;
+            width: 100%;
+            padding: 24px;
+            position: relative;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #595959;
+        }
+
+        .nutri-table {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 14px;
+            font-size: 12px;
+        }
+
+        .nutri-header {
+            background: #f8f8f8;
+            font-weight: bold;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .nutri-row {
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .newsletter-section {
+            background: #fff5f5;
+            border-top: 1px solid #fed7cc;
+            border-bottom: 1px solid #fed7cc;
+            padding: 48px 24px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .newsletter-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #800f2f;
+            margin-bottom: 8px;
+        }
+
+        .newsletter-desc {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            padding: 12px 16px;
+            border: 1px solid #767676;
+            border-radius: 6px;
+            font-size: 14px;
+            flex: 1;
+            min-width: 240px;
+            background: #ffffff;
+        }
+
+        .newsletter-input[aria-invalid="true"] {
+            border: 2px solid #ef4444 !important;
+            background: #fff1f2 !important;
+        }
+
+        .field-error {
+            color: #ef4444;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .field-error:empty {
+            display: none;
+        }
+
+        .newsletter-submit-btn {
+            background: #c9184a;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .terms-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #666666;
+            margin-top: 8px;
+        }
+
+        .footer-wrapper {
+            background: #ffffff;
+            padding: 40px 32px 24px;
+            border-top: 1px solid #f0e6e6;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-heading {
+            font-size: 15px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+
+        .footer-links-list {
+            list-style: none;
+        }
+
+        .footer-links-list li {
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            color: #bbbbbb;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .social-icons-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            background: #f4ecec;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #555555;
+            text-decoration: none;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            border-top: 1px solid #f5eeee;
+            padding-top: 20px;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        #toast-msg {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #2d6a4f;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            display: none;
+            z-index: 1000;
+        }
+
+        
+    </style>
+    <script src="/_aistudio-iframe.js?v=6634132a"></script>
+</head>
+
+<body>
+
+    <div class="top-announcement">
+        🍓 Fresas y Fresones recolectados al alba en las Huertas Reales de Aranjuez (Madrid) • Envío en frío 24h
+    </div>
+
+    <div class="ticker-container">
+        <div class="ticker-text">
+            👑 ¡TEMPORADA REAL DE ARANJUEZ! 2x1 EN FRESÓN DE LA VEGA Y FRESAS SALVAJES DEL TAJO • EDICIÓN TREN DE LA
+            FRESA 2026 • RESERVAS LIMITADAS 👑
+        </div>
+    </div>
+
+    <div class="header-wrapper">
+        <div class="brand-logo-area">
+            <img src="./public/logo.jpeg" class="brand-logo-img">
+            <div class="brand-title">Fresas y Fresones de Aranjuez</div>
+        </div>
+
+        <div class="search-box-container">
+            <input type="text" class="search-input" placeholder="Buscar fresones de Aranjuez, mermeladas reales...">
+        </div>
+
+        <div class="nav-bar">
+            <a href="#inicio" class="nav-link" tabindex="10">Inicio</a>
+            <a href="#productos" class="nav-link" tabindex="5">Productos</a>
+            <a href="#nosotros" class="nav-link" tabindex="2">Nosotros</a>
+            <a href="#contacto" class="nav-link" tabindex="8">Contacto</a>
+
+            <div class="cart-pill" onclick="mostrarCarrito()">
+                🛒 Carrito (<span id="cart-counter">0</span>)
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-banner">
+        <div class="hero-content">
+            <div class="hero-tag">Cosecha Real Aranjuez</div>
+            <h1 class="hero-title">¡COSECHA REAL DE ARANJUEZ!<br>2x1 en fresones y fresas de la vega</h1>
+            <p class="hero-subtitle">
+                Cultivo secular en la vega fértil del río Tajo desde tiempos de Carlos III. Aroma inconfundible, textura
+                carnosa y dulzor genuino de la huerta madrileña.
+            </p>
+            <div class="hero-cta-btn" onclick="scrollearProductos()">
+                Explorar Cosecha Real →
+            </div>
+        </div>
+
+        <div class="hero-image-box">
+            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80"
+                alt="IMG_20240502_0941.JPG" class="hero-img">
+        </div>
+    </div>
+
+    <div class="catalog-container" id="productos">
+        <div class="section-header-box">
+            <h4 class="section-title">Fresas y Fresones Reales de Aranjuez</h4>
+            <p class="section-desc">Recolectadas una a una a mano en las vegas históricas del río Tajo y el Real Cortijo
+                de San Isidro.</p>
+        </div>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <img src="./public/cesta-fresones.jpg" class="product-img">
+                <div class="product-info">
+                    <div class="product-badge">Fresón de Aranjuez</div>
+                    <h6 class="product-title">Cesta Real Fresón de Aranjuez Selección (2 kg)</h6>
+                    <p class="product-desc">Fresones de gran calibre recolectados a mano en las huertas históricas del
+                        Tajo. Muy carnosos.</p>
+
+                    <div class="stock-row">
+                        <span>Disponibilidad:</span>
+                        <span class="stock-dot stock-green" title="En stock"></span>
+                    </div>
+
+                    <a href="#detalles" class="more-link">Leer más</a>
+
+                    <div class="qty-row">
+                        <span class="qty-label">Cantidad:</span>
+                        <select id="qty-cesta" class="qty-select">
+                            <option>4</option>
+                            <option>2</option>
+                            <option>world</option>
+                            <option>12</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>7</option>
+                            <option>hello</option>
+                            <option>99</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+
+                    <div class="price-row">
+                        <span aria-hidden="true" class="product-price">14,50 €</span>
+                        <span class="tax-notice">(I.V.A. no incluido)</span>
+                    </div>
+
+                    <div class="add-to-cart-btn" onclick="anadirAlCarrito('Cesta Real Fresón Aranjuez 2kg', 'qty-cesta')">
+                        Añadir al carrito
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./public/fresa-tradicional.jpg" class="product-img" alt="Fresas Silvestres">
+                <div class="product-info">
+                    <div class="product-badge">Fresa Silvestre</div>
+                    <h2 class="product-title" style="font-size: 16px; margin-bottom: 6px;">Fresa de Aranjuez Tradicional
+                        de Huerta (500g)</h2>
+                    <p class="product-desc">La mítica fresa pequeña aromática histórica de Aranjuez. Piel delicada y
+                        sabor concentrado.</p>
+
+                    <div class="stock-row">
+                        <span>Disponibilidad:</span>
+                        <span class="stock-dot stock-yellow" title="Pocas unidades"></span>
+                    </div>
+
+                    <a href="#detalles" class="more-link">Leer más</a>
+
+                    <div class="qty-row">
+                        <label for="qty-silvestre" class="qty-label">Cantidad:</label>
+                        <div class="qty-stepper" role="group" aria-label="Selector de cantidad para Fresa Silvestre">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-silvestre', -1)"
+                                aria-label="Disminuir cantidad de Fresa Silvestre">−</button>
+                            <input type="number" id="qty-silvestre" class="qty-input" value="1" min="1" max="99"
+                                onchange="validarCantidad(this)" aria-label="Cantidad de Fresa Silvestre">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-silvestre', 1)"
+                                aria-label="Aumentar cantidad de Fresa Silvestre">+</button>
+                        </div>
+                    </div>
+
+                    <div class="price-row">
+                        <span aria-hidden="true" class="product-price">8,90 €</span>
+                        <span class="tax-notice">(I.V.A. no incluido)</span>
+                    </div>
+
+                    <div class="add-to-cart-btn" onclick="anadirAlCarrito('Fresa de Aranjuez Silvestre', 'qty-silvestre')">
+                        Añadir al carrito
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./public/mermelada-fresones.jpg" class="product-img">
+                <div class="product-info">
+                    <div class="product-badge">Real Cortijo</div>
+                    <h6 class="product-title">Mermelada Artesana de Fresón de Aranjuez (350g)</h6>
+                    <p class="product-desc">Elaborada con 85% de fruta de las Huertas de San Isidro y azúcar de caña.
+                        Sin aditivos.</p>
+
+                    <div class="stock-row">
+                        <span>Disponibilidad:</span>
+                        <span class="stock-dot stock-red" title="Bajo pedido"></span>
+                    </div>
+
+                    <a href="#detalles" class="more-link">Leer más</a>
+
+                    <div class="qty-row">
+                        <label for="qty-mermelada" class="qty-label">Cantidad:</label>
+                        <div class="qty-stepper" role="group" aria-label="Selector de cantidad para Mermelada Artesana">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-mermelada', -1)"
+                                aria-label="Disminuir cantidad de Mermelada Artesana">−</button>
+                            <input type="number" id="qty-mermelada" class="qty-input" value="1" min="1" max="99"
+                                onchange="validarCantidad(this)" aria-label="Cantidad de Mermelada Artesana">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-mermelada', 1)"
+                                aria-label="Aumentar cantidad de Mermelada Artesana">+</button>
+                        </div>
+                    </div>
+
+                    <div class="price-row">
+                        <span aria-hidden="true" class="product-price">5,20 €</span>
+                        <span class="tax-notice">(I.V.A. no incluido)</span>
+                    </div>
+
+                    <div class="add-to-cart-btn" onclick="anadirAlCarrito('Mermelada de Fresón de Aranjuez', 'qty-mermelada')">
+                        Añadir al carrito
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="./public/tarta-fresones.jpg" alt="Tarta de Fresones" class="product-img">
+                <div class="product-info">
+                    <div class="product-badge">Obrador Real</div>
+                    <h6 class="product-title">Tarta Real de Fresones de Aranjuez y Nata</h6>
+                    <p class="product-desc">Elaborada a diario en nuestro obrador con bizcocho genovés ligero y fresones
+                        recién cosechados.</p>
+
+                    <div class="stock-row">
+                        <span>Disponibilidad:</span>
+                        <span class="stock-dot stock-green" title="En stock"></span>
+                    </div>
+
+                    <a href="#detalles" class="more-link">Leer más</a>
+
+                    <div class="qty-row">
+                        <label for="qty-tarta" class="qty-label">Cantidad:</label>
+                        <div class="qty-stepper" role="group" aria-label="Selector de cantidad para Tarta Real">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-tarta', -1)"
+                                aria-label="Disminuir cantidad de Tarta Real">−</button>
+                            <input type="number" id="qty-tarta" class="qty-input" value="1" min="1" max="99"
+                                onchange="validarCantidad(this)" aria-label="Cantidad de Tarta Real">
+                            <button type="button" class="qty-btn" onclick="ajustarCantidad('qty-tarta', 1)"
+                                aria-label="Aumentar cantidad de Tarta Real">+</button>
+                        </div>
+                    </div>
+
+                    <div class="price-row">
+                        <span aria-hidden="true" class="product-price">24,00 €</span>
+                        <span class="tax-notice">(I.V.A. no incluido)</span>
+                    </div>
+
+                    <div class="add-to-cart-btn" onclick="anadirAlCarrito('Tarta Real de Fresones de Aranjuez', 'qty-tarta')">
+                        Añadir al carrito
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info-banner-box">
+            ¿Tienes dudas sobre alérgenos o variedades de las huertas de Aranjuez?
+            <a href="#alergenos" style="color: #c9184a; font-weight: bold;" onclick="abrirModalAlergenos(event)">Haz
+                clic aquí</a>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="alergenos-modal">
+        <div class="modal-window">
+            <div class="modal-close-btn" onclick="cerrarModalAlergenos()">✕</div>
+            <h3 style="font-size: 20px; font-weight: 800; color: #800f2f; margin-bottom: 6px;">
+                Tabla Nutricional & Variedades de Aranjuez
+            </h3>
+            <p style="font-size: 13px; color: #666; margin-bottom: 16px;">
+                Composición media por 100g de fresón y fresa de las Huertas Reales de Aranjuez (vega del Tajo).
+            </p>
+
+            <div class="nutri-table">
+                <div class="nutri-header">
+                    <div>Componente</div>
+                    <div>Por 100g</div>
+                </div>
+                <div class="nutri-row">
+                    <div>Valor Energético</div>
+                    <div>32 kcal / 136 kJ</div>
+                </div>
+                <div class="nutri-row">
+                    <div>Azúcares naturales (Fructosa del Tajo)</div>
+                    <div>4.9 g</div>
+                </div>
+                <div class="nutri-row">
+                    <div>Vitamina C</div>
+                    <div>58.8 mg (98% CDR)</div>
+                </div>
+                <div class="nutri-row">
+                    <div>Alérgenos declarados</div>
+                    <div style="color: #c9184a; font-weight: bold;">Sin sulfitos ni gluten</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; text-align: right;">
+                <div style="background: #2b2b2b; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: bold; cursor: pointer; display: inline-block;"
+                    onclick="cerrarModalAlergenos()">
+                    Cerrar ventana
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter-section">
+        <div class="newsletter-content">
+            <h3 class="newsletter-title">Suscríbete para recibir fresones frescos de Aranjuez</h3>
+            <p class="newsletter-desc">Te avisaremos en cuanto arranque la recogida matutina en las Huertas Reales y de
+                los viajes del Tren de la Fresa.</p>
+
+            <div class="form-row">
+                <input type="text" id="news-name" class="newsletter-input" placeholder="Tu nombre...">
+                <input type="email" id="news-email" class="newsletter-input" placeholder="Tu correo electrónico...">
+                <button class="newsletter-submit-btn" onclick="suscribirNewsletter()">
+                    Suscribirme
+                </button>
+            </div>
+
+            <!--Todo: agregar role="alert" para accesibilidad for error messages-->
+            <!--
+            <p id="news-name-error" class="field-error" role="alert"></p>
+            <p id="news-email-error" class="field-error" role="alert"></p>
+            -->
+
+            <div class="terms-row">
+                <input type="checkbox" id="check-privacidad">
+                <span>Acepto recibir correos con promociones de fresones de Aranjuez y eventos del Tren de la
+                    Fresa</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-heading">Fresas y Fresones de Aranjuez S.L.</div>
+                <p style="color: #666666; font-size: 13px; line-height: 1.6;">
+                    Cultivo secular en la vega fértil del río Tajo desde 1750. Real Sitio y Villa de Aranjuez, Comunidad
+                    de Madrid.
+                </p>
+            </div>
+
+            <div>
+                <div class="footer-heading">Enlaces Rápidos</div>
+                <ul class="footer-links-list">
+                    <li><a href="#" class="footer-link">Huertas del Real Sitio</a></li>
+                    <li><a href="#" class="footer-link">Historia y Tren de la Fresa</a></li>
+                    <li><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+                    <li><a href="#" class="footer-link">Envíos en Frío 24h</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="footer-heading">Atención al Cliente</div>
+                <ul class="footer-links-list">
+                    <li><a href="#" class="footer-link">contacto@fresonesaranjuez.es</a></li>
+                    <li><a href="#" class="footer-link">+34 91 891 00 22</a></li>
+                    <li><a href="#" class="footer-link">Lunes a Viernes: 08:00 - 15:00</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="footer-heading">Síguenos</div>
+                <div class="social-icons-row">
+                    <a href="#" class="social-btn">📷</a>
+                    <a href="#" class="social-btn">📘</a>
+                    <a href="#" class="social-btn">🐦</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            © 2026 Fresas y Fresones de Aranjuez S.L. — Real Sitio y Villa de Aranjuez (Madrid). Diseñado con pasión por
+            la huerta.
+        </div>
+    </div>
+
+    <div id="toast-msg"></div>
+
+    <script>
+        let carritoContador = 0;
+        const cantidades = { 1: 1, 2: 1, 3: 1, 4: 1 };
+
+        function alterarCantidad(id, delta) {
+            cantidades[id] = Math.max(1, (cantidades[id] || 1) + delta);
+            const el = document.getElementById('qty-' + id);
+            if (el) el.textContent = cantidades[id];
+        }
+
+        function mostrarToast(mensaje) {
+            const toast = document.getElementById('toast-msg');
+            if (toast) {
+                toast.textContent = mensaje;
+                toast.style.display = 'block';
+                setTimeout(() => { toast.style.display = 'none'; }, 3000);
+            }
+        }
+
+        function ajustarCantidad(inputId, delta) {
+            const input = document.getElementById(inputId);
+            if (!input) return;
+            let val = parseInt(input.value, 10) || 1;
+            val = Math.max(1, Math.min(99, val + delta));
+            input.value = val;
+        }
+
+        function validarCantidad(input) {
+            let val = parseInt(input.value, 10);
+            if (isNaN(val) || val < 1) {
+                input.value = 1;
+            } else if (val > 99) {
+                input.value = 99;
+            } else {
+                input.value = val;
+            }
+        }
+
+        function anadirAlCarrito(nombreProducto, inputId) {
+            let cantidad = 1;
+            if (inputId) {
+                const input = document.getElementById(inputId);
+                if (input) {
+                    cantidad = parseInt(input.value, 10) || 1;
+                }
+            }
+            carritoContador += cantidad;
+            const counterEl = document.getElementById('cart-counter');
+            if (counterEl) counterEl.textContent = carritoContador;
+            mostrarToast('🍓 ' + (cantidad > 1 ? cantidad + 'x ' : '') + nombreProducto + ' añadido al carrito');
+        }
+
+        function mostrarCarrito() {
+            if (carritoContador === 0) {
+                mostrarToast('Tu carrito está vacío. ¡Añade deliciosas fresas!');
+            } else {
+                mostrarToast('Tienes ' + carritoContador + ' producto(s) en tu carrito.');
+            }
+        }
+
+        function scrollearProductos() {
+            const sec = document.getElementById('productos');
+            if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function abrirModalAlergenos(e) {
+            if (e) e.preventDefault();
+            const modal = document.getElementById('alergenos-modal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function cerrarModalAlergenos() {
+            const modal = document.getElementById('alergenos-modal');
+            if (modal) modal.style.display = 'none';
+        }
+        
+        function validarCampo(input, errorMsg, esValido, mensaje) {
+            if (esValido) {
+                input.removeAttribute('aria-invalid');
+                errorMsg.textContent = '';
+            } else {
+                input.setAttribute('aria-invalid', 'true');
+                errorMsg.textContent = mensaje;
+            }
+        }
+        
+        function suscribirNewsletter() {
+            const nameInput = document.getElementById('news-name');
+            const emailInput = document.getElementById('news-email');
+            const nombreValido = nameInput.value.trim() !== '';
+            const emailValido = emailInput.value.includes('@');
+
+            validarCampo(nameInput, document.getElementById('news-name-error'), nombreValido,
+                '⚠ Error: introduce tu nombre');
+            validarCampo(emailInput, document.getElementById('news-email-error'), emailValido,
+                '⚠ Error: introduce un correo electrónico válido, por ejemplo nombre@dominio.es');
+
+            if (!nombreValido) {
+                nameInput.focus();
+                mostrarToast('Error en el formulario');
+            } else if (!emailValido) {
+                emailInput.focus();
+                mostrarToast('Error en el formulario');
+            } else {
+                mostrarToast('¡Gracias por suscribirte al boletín de Fresas y Fresones de Aranjuez!');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
