@@ -25,7 +25,7 @@ npx serve solution
 3. Usa la extensión en tu IDE de [LiveServer](https://open-vsx.org/extension/ritwickdey/LiveServer)
 
 Último recurso si el resto no funciona
-(Web con baja accesibilidad disponible online)[https://a11y-workshop-broken.vercel.app/]
+[Web con baja accesibilidad disponible online](https://a11y-workshop-broken.vercel.app/)
 
 ## Objetivo de hoy: Consigue que la web sea accesible
 * Debes obtener una puntuación de 100 en Lighthouse
