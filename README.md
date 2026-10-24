@@ -11,7 +11,7 @@ En este taller vamos a implementar accesibilidad en una web completamente inacce
 1. Descarga este repositorio, vamos a trabajar con la carpeta **broken** - recomiendo hacer un **fork** del repositorio si tienes github
 2. Instala la extensión de [Axe Dev Tools](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 3. Inicia la web en un servidor HTTP
-4. Recomendado: aprovecha créditos gratuitos de Google para provar [Google Antigravity](https://antigravity.google/) [reclama tus créditos aquí](https://me.developers.google.com/benefits/claim/devfest-aranjuez)
+4. Recomendado: aprovecha créditos gratuitos de Google para usar [Google Antigravity](https://antigravity.google/) [reclama tus créditos aquí](https://me.developers.google.com/benefits/claim/devfest-aranjuez)
 
 Opciones:
 1. Usando Python
