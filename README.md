@@ -31,10 +31,3 @@ npx serve solution
 * Usa la web con el VoiceOver - asegúrate de tener las voces descargadas para testear
   - en Mac **Option + Command + F5**
   - en Windows **Ctrl + Win + Enter**
-
-## ¿Necesitas alguna pista? Siempre puedes consultar la carpeta SOLUTION
-<details>
-  <summary>Haz click aquí</summary>
-
-  Put your hidden text, lists, or code blocks here.
-</details>
